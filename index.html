@@ -115,7 +115,7 @@
         <li id="text22">Unità di Memoria Centrale (RAM): Conserva sia le istruzioni del programma che i dati. Ogni locazione ha un indirizzo. </li>
         <li id="text23">Unità Aritmetico-Logica (ALU): Dove avvengono i calcoli (addizioni, moltiplicazioni, confronti logici tipo 'maggiore di'). </li>
         <li id="text24">Unità di Controllo (CU): Il 'direttore d'orchestra'. Legge le istruzioni dalla memoria, le decodifica e genera i segnali di controllo che dicono all'ALU, alla memoria e all'I/O cosa fare e quando. </li>
-        <li id"text25">Dispositivi di Input: Servono a caricare il programma e i dati nella memoria (es. tastiera, mouse, disco fisso).</li>
+        <li id"text=25">Dispositivi di Input: Servono a caricare il programma e i dati nella memoria (es. tastiera, mouse, disco fisso).</li>
         <li id="text26">Dispositivi di Output: Servono a visualizzare o trasmettere i risultati (es. monitor, stampante).</li>
     </ol>
 
@@ -134,7 +134,7 @@
             question2: "I 5 Componenti Fondamentali",
             text21: "Un computer von Neumann è composto da cinque unità interconnesse:",
             text22: "Unità di Memoria Centrale (RAM): Conserva sia le istruzioni del programma che i dati. Ogni locazione ha un indirizzo.",
-            text23: "Unità Aritmetico-Logica (ALU): Dove avvengono i calcoli (addizioni, moltiplicazioni, confronti logici tipo "maggiore di").",
+            text23: "Unità Aritmetico-Logica (ALU): Dove avvengono i calcoli (addizioni, moltiplicazioni, confronti logici tipo 'maggiore di').",
         },
         en: {
             title: "VON NEUMANN MODEL",
@@ -159,10 +159,10 @@
         // Cambia tutti i testi della pagina
         document.getElementById('title').innerHTML = traduzioni[lingua].title;
         document.getElementById('subtitle').innerHTML = traduzioni[lingua].subtitle;
-        document.getElementById('question').innerHTML = traduzioni[lingua].question1;
-        document.getElementById('text1').innerHTML = traduzioni[lingua].text11;
-        document.getElementById('text2').innerHTML = traduzioni[lingua].text12;
-        document.getElementById('text3').innerHTML = traduzioni[lingua].text13;
+        document.getElementById('question1').innerHTML = traduzioni[lingua].question1;
+        document.getElementById('text11').innerHTML = traduzioni[lingua].text11;
+        document.getElementById('text12').innerHTML = traduzioni[lingua].text12;
+        document.getElementById('text13').innerHTML = traduzioni[lingua].text13;
         
         // Evidenzia il bottone attivo
         const bottoni = document.querySelectorAll('.lang-btn');
