@@ -1,33 +1,155 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <!-- Importazione da Google Fonts -->
-    <link href="https://googleapis.com" rel="stylesheet">
+    <!-- Importazione corretta da Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;700&display=swap" rel="stylesheet">
     
     <style>
         body {
             /* Applicazione del font */
             font-family: 'Comfortaa', cursive;
+            margin: 0;
+            padding: 0;
         }
+        
         .header {
             text-align: center;
             padding: 20px;
             background-color: #007FFF;
             color: white;
         }
+        
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+        
+        /* Stile per i bottoni lingua */
+        .language-buttons {
+            text-align: right;
+            padding: 10px 20px;
+            background-color: #e0e0e0;
+        }
+        
+        .lang-btn {
+            background-color: #007FFF;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            margin: 0 5px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-family: 'Comfortaa', cursive;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+        
+        .lang-btn:hover {
+            background-color: #0055aa;
+            transform: scale(1.05);
+        }
+        
+        .lang-btn.active {
+            background-color: #ff6b6b;
+        }
+        
+        .content {
+            padding: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        h3 {
+            color: #007FFF;
+        }
+        
+        p {
+            line-height: 1.6;
+        }
     </style>
-  <title> Von Neumann</title> <!-- titolo scheda -->
+    
+    <title>Von Neumann</title> <!-- titolo scheda -->
 </head>
-<body>
-  <body bgcolor="#BADFFF">
-  <div class="header">
-      <h3 align="right"> ITA / ENG / 中文</h3>
-      <h1> MODELLO VON NEUMANN </h1>
-      <h5> Sistemi e Reti</h5>
-  </div>
-  <h3> Cos'è l'Architettura di von Neumann? </h3>    
-  <p> È un modello concettuale per la progettazione di computer digitali. Il suo principio fondamentale, rivoluzionario nel 1945, è oggi talmente scontato che quasi non ci pensiamo più: </p>
-  <p> Il programma (il software) e i dati su cui opera risiedono nella stessa memoria e sono trattati allo stesso modo. </p>
-  <p> Prima di von Neumann, i computer come l'ENIAC venivano "programmati" riconfigurando fisicamente cavi e interruttori. L'architettura di von Neumann introdusse l'idea del programma memorizzato (stored-program computer), rendendo i computer flessibili e riprogrammabili software. </p>
-  
+
+<body bgcolor="#BADFFF">
+
+<!-- BOTTONI PER SELEZIONARE LA LINGUA (in alto a destra) -->
+<div class="language-buttons">
+    <button class="lang-btn" onclick="cambiaLingua('it')">🇮🇹 ITA</button>
+    <button class="lang-btn" onclick="cambiaLingua('en')">🇬🇧 ENG</button>
+    <button class="lang-btn" onclick="cambiaLingua('zh')">🇨🇳 中文</button>
+</div>
+
+<div class="header">
+    <h1 id="title">MODELLO VON NEUMANN</h1>
+    <h5 id="subtitle">Sistemi e Reti</h5>
+</div>
+
+<div class="content">
+    <h3 id="question">Cos'è l'Architettura di von Neumann?</h3>
+    
+    <p id="text1">È un modello concettuale per la progettazione di computer digitali. Il suo principio fondamentale, rivoluzionario nel 1945, è oggi talmente scontato che quasi non ci pensiamo più:</p>
+    
+    <p id="text2"><strong>Il programma (il software) e i dati su cui opera risiedono nella stessa memoria e sono trattati allo stesso modo.</strong></p>
+    
+    <p id="text3">Prima di von Neumann, i computer come l'ENIAC venivano "programmati" riconfigurando fisicamente cavi e interruttori. L'architettura di von Neumann introdusse l'idea del programma memorizzato (stored-program computer), rendendo i computer flessibili e riprogrammabili software.</p>
+</div>
+
+<script>
+    // DIZIONARIO CON I TESTI IN DIVERSE LINGUE
+    const traduzioni = {
+        it: {
+            title: "MODELLO VON NEUMANN",
+            subtitle: "Sistemi e Reti",
+            question: "Cos'è l'Architettura di von Neumann?",
+            text1: "È un modello concettuale per la progettazione di computer digitali. Il suo principio fondamentale, rivoluzionario nel 1945, è oggi talmente scontato che quasi non ci pensiamo più:",
+            text2: "Il programma (il software) e i dati su cui opera risiedono nella stessa memoria e sono trattati allo stesso modo.",
+            text3: "Prima di von Neumann, i computer come l'ENIAC venivano 'programmati' riconfigurando fisicamente cavi e interruttori. L'architettura di von Neumann introdusse l'idea del programma memorizzato (stored-program computer), rendendo i computer flessibili e riprogrammabili software."
+        },
+        en: {
+            title: "VON NEUMANN MODEL",
+            subtitle: "Systems and Networks",
+            question: "What is von Neumann Architecture?",
+            text1: "It is a conceptual model for designing digital computers. Its fundamental principle, revolutionary in 1945, is now so obvious that we hardly think about it:",
+            text2: "The program (software) and the data it operates on reside in the same memory and are treated the same way.",
+            text3: "Before von Neumann, computers like the ENIAC were 'programmed' by physically reconfiguring cables and switches. Von Neumann's architecture introduced the stored-program concept, making computers flexible and software-reprogrammable."
+        },
+        zh: {
+            title: "冯·诺依曼模型",
+            subtitle: "系统与网络",
+            question: "什么是冯·诺依曼架构？",
+            text1: "这是一个用于设计数字计算机的概念模型。其基本原理在1945年具有革命性，如今已变得理所当然，我们几乎不再去想它：",
+            text2: "程序（软件）及其操作的数据存储在同一内存中，并以相同方式处理。",
+            text3: "在冯·诺依曼之前，像ENIAC这样的计算机通过物理重新配置电缆和开关来'编程'。冯·诺依曼架构引入了存储程序计算机的概念，使计算机变得灵活且可通过软件重新编程。"
+        }
+    };
+    
+    // FUNZIONE PER CAMBIARE LINGUA
+    function cambiaLingua(lingua) {
+        // Cambia tutti i testi della pagina
+        document.getElementById('title').innerHTML = traduzioni[lingua].title;
+        document.getElementById('subtitle').innerHTML = traduzioni[lingua].subtitle;
+        document.getElementById('question').innerHTML = traduzioni[lingua].question;
+        document.getElementById('text1').innerHTML = traduzioni[lingua].text1;
+        document.getElementById('text2').innerHTML = traduzioni[lingua].text2;
+        document.getElementById('text3').innerHTML = traduzioni[lingua].text3;
+        
+        // Evidenzia il bottone attivo
+        const bottoni = document.querySelectorAll('.lang-btn');
+        bottoni.forEach(btn => {
+            btn.classList.remove('active');
+        });
+        
+        // Aggiungi classe active al bottone cliccato
+        const bottoneAttivo = document.querySelector(`.lang-btn[onclick="cambiaLingua('${lingua}')"]`);
+        if (bottoneAttivo) {
+            bottoneAttivo.classList.add('active');
+        }
+    }
+</script>
+
 </body>
+</html>
