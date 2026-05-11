@@ -105,25 +105,25 @@
             title: "MODELLO VON NEUMANN",
             subtitle: "Sistemi e Reti",
             question1: "Cos'è l'Architettura di von Neumann?",
-            text1.1: "È un modello concettuale per la progettazione di computer digitali. Il suo principio fondamentale, rivoluzionario nel 1945, è oggi talmente scontato che quasi non ci pensiamo più:",
-            text1.2: "Il programma (il software) e i dati su cui opera risiedono nella stessa memoria e sono trattati allo stesso modo.",
-            text1.3: "Prima di von Neumann, i computer come l'ENIAC venivano 'programmati' riconfigurando fisicamente cavi e interruttori. L'architettura di von Neumann introdusse l'idea del programma memorizzato (stored-program computer), rendendo i computer flessibili e riprogrammabili software."
+            text1_1: "È un modello concettuale per la progettazione di computer digitali. Il suo principio fondamentale, rivoluzionario nel 1945, è oggi talmente scontato che quasi non ci pensiamo più:",
+            text1_2: "Il programma (il software) e i dati su cui opera risiedono nella stessa memoria e sono trattati allo stesso modo.",
+            text1_3: "Prima di von Neumann, i computer come l'ENIAC venivano 'programmati' riconfigurando fisicamente cavi e interruttori. L'architettura di von Neumann introdusse l'idea del programma memorizzato (stored-program computer), rendendo i computer flessibili e riprogrammabili software."
         },
         en: {
             title: "VON NEUMANN MODEL",
             subtitle: "Systems and Networks",
             question1: "What is von Neumann Architecture?",
-            text1.1: "It is a conceptual model for designing digital computers. Its fundamental principle, revolutionary in 1945, is now so obvious that we hardly think about it:",
-            text1.2: "The program (software) and the data it operates on reside in the same memory and are treated the same way.",
-            text1.3: "Before von Neumann, computers like the ENIAC were 'programmed' by physically reconfiguring cables and switches. Von Neumann's architecture introduced the stored-program concept, making computers flexible and software-reprogrammable."
+            text1_1: "It is a conceptual model for designing digital computers. Its fundamental principle, revolutionary in 1945, is now so obvious that we hardly think about it:",
+            text1_2: "The program (software) and the data it operates on reside in the same memory and are treated the same way.",
+            text1_3: "Before von Neumann, computers like the ENIAC were 'programmed' by physically reconfiguring cables and switches. Von Neumann's architecture introduced the stored-program concept, making computers flexible and software-reprogrammable."
         },
         zh: {
             title: "冯·诺依曼模型",
             subtitle: "系统与网络",
             question1: "什么是冯·诺依曼架构？",
-            text1.1: "这是一个用于设计数字计算机的概念模型。其基本原理在1945年具有革命性，如今已变得理所当然，我们几乎不再去想它：",
-            text1.2: "程序（软件）及其操作的数据存储在同一内存中，并以相同方式处理。",
-            text1.3: "在冯·诺依曼之前，像ENIAC这样的计算机通过物理重新配置电缆和开关来'编程'。冯·诺依曼架构引入了存储程序计算机的概念，使计算机变得灵活且可通过软件重新编程。"
+            text1_1: "这是一个用于设计数字计算机的概念模型。其基本原理在1945年具有革命性，如今已变得理所当然，我们几乎不再去想它：",
+            text1_2: "程序（软件）及其操作的数据存储在同一内存中，并以相同方式处理。",
+            text1_3: "在冯·诺依曼之前，像ENIAC这样的计算机通过物理重新配置电缆和开关来'编程'。冯·诺依曼架构引入了存储程序计算机的概念，使计算机变得灵活且可通过软件重新编程。"
         }
     };
     
@@ -133,9 +133,9 @@
         document.getElementById('title').innerHTML = traduzioni[lingua].title;
         document.getElementById('subtitle').innerHTML = traduzioni[lingua].subtitle;
         document.getElementById('question').innerHTML = traduzioni[lingua].question1;
-        document.getElementById('text1').innerHTML = traduzioni[lingua].text1.1;
-        document.getElementById('text2').innerHTML = traduzioni[lingua].text1.2;
-        document.getElementById('text3').innerHTML = traduzioni[lingua].text1.3;
+        document.getElementById('text1').innerHTML = traduzioni[lingua].text1_1;
+        document.getElementById('text2').innerHTML = traduzioni[lingua].text1_2;
+        document.getElementById('text3').innerHTML = traduzioni[lingua].text1_3;
         
         // Evidenzia il bottone attivo
         const bottoni = document.querySelectorAll('.lang-btn');
