@@ -107,18 +107,29 @@
 
     <p id="text21"> Un computer von Neumann è composto da cinque unità interconnesse: </p>
 
-    <ol>
+    <ul>
         <li id="text22">Unità di Memoria Centrale (RAM): Conserva sia le istruzioni del programma che i dati. Ogni locazione ha un indirizzo. </li>
         <li id="text23">Unità Aritmetico-Logica (ALU): Dove avvengono i calcoli (addizioni, moltiplicazioni, confronti logici tipo 'maggiore di'). </li>
         <li id="text24">Unità di Controllo (CU): Il 'direttore d'orchestra'. Legge le istruzioni dalla memoria, le decodifica e genera i segnali di controllo che dicono all'ALU, alla memoria e all'I/O cosa fare e quando. </li>
         <li id"text=25">Dispositivi di Input: Servono a caricare il programma e i dati nella memoria (es. tastiera, mouse, disco fisso).</li>
         <li id="text26">Dispositivi di Output: Servono a visualizzare o trasmettere i risultati (es. monitor, stampante).</li>
-    </ol>
+    </ul>
 
     <p id="text27">Nota: Oggi, la CPU (Central Processing Unit) racchiude al suo interno sia l'ALU che l'Unità di Controllo. </p>
 
-<img src="https://www.villaggioinformatico.it/articoli/macchina-di-von-neumann"
+<img src="https://www.villaggioinformatico.it/static/images/cpu.png"
     style="display: block; margin-left: auto; margin-right: auto; width: 300px; height: auto;">
+
+    <h3 id="question3">Il Ciclo Fetch-Decode-Execute: Il "Battito" del Computer </h3>
+
+    <p id="text31"> Questo è il cuore del funzionamento. La CPU esegue questo ciclo all'infinito, miliardi di volte al secondo </p>
+
+    <ol>
+        <li id="text32"> FETCH (Prelievo): L'Unità di Controllo preleva dalla memoria la prossima istruzione da eseguire (grazie a un registro speciale chiamato Program Counter). </li>
+        <li id="text33"> DECODE (Decodifica): L'Unità di Controllo analizza l'istruzione per capire che operazione richiede (es. "somma due numeri", "carica dato dalla cella 100"). </li>
+        <li id="text34"> EXECUTE (Esecuzione): L'Unità di Controllo attiva le componenti necessarie (es. l'ALU) per eseguire l'operazione. </li>
+        <li id="text35"> STORE (Memorizzazione, spesso incluso nell'EXECUTE): Il risultato (se presente) viene riscritto nella memoria o in un registro della CPU. Poi il ciclo riparte con l'istruzione successiva. </li>
+    </ol>
 </div>
     
 <script>
